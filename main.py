@@ -11,6 +11,8 @@ def main():
     print(f"Screen height: {c.SCREEN_HEIGHT}")
 
     screen = pygame.display.set_mode((c.SCREEN_WIDTH, c.SCREEN_HEIGHT))
+    clock = pygame.time.Clock()
+    dt = 0
 
     while True:
         for event in pygame.event.get():
@@ -18,6 +20,9 @@ def main():
                 return
         pygame.Surface.fill(screen, (0, 0, 0))
         pygame.display.flip()
+
+        print(dt)
+        dt = clock.tick(c.FPS_LIMIT) / 1000
 
 
 if __name__ == "__main__":
