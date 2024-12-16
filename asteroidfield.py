@@ -46,7 +46,7 @@ class AsteroidField(pygame.sprite.Sprite):
             velocity = edge[0] * speed
             velocity = velocity.rotate(
                 random.randint(
-                    c.ASTEROID_MIN_VELOCITY_ANGLE, c.ASTEROID_MAX_VELOCITY_ANGLE
+                    c.ASTEROID_MIN_SPAWN_ANGLE, c.ASTEROID_MAX_SPAWN_ANGLE
                 )
             )
             position = edge[1](random.uniform(0, 1))
